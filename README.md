@@ -1,10 +1,10 @@
-# simple-daterange_picker
+# @abdulwaqar844/date-range-picker
 
 An ultra-lightweight, Ant Design-inspired, mobile-responsive Date & Time Picker suite for React.
 
 Houses **DatePicker**, **TimePicker**, **DateTimePicker**, **DateRangePicker**, and **DateTimeRangePicker** in a single production-ready package with **zero heavy UI framework dependencies** (no Emotion, no Styled-Components, no MUI core).
 
-[![npm version](https://img.shields.io/badge/npm-v1.0.0-blue.svg)](https://www.npmjs.com/package/simple-daterange_picker)
+[![npm version](https://img.shields.io/badge/npm-v1.0.0-blue.svg)](https://www.npmjs.com/package/@abdulwaqar844/date-range-picker)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Bundle Size](https://img.shields.io/badge/bundle%20size-%3C15KB%20gzip-brightgreen.svg)]()
 
@@ -24,17 +24,17 @@ Houses **DatePicker**, **TimePicker**, **DateTimePicker**, **DateRangePicker**, 
 ## 📦 Installation
 
 ```bash
-npm install simple-daterange_picker dayjs
+npm install @abdulwaqar844/date-range-picker dayjs
 # or
-pnpm add simple-daterange_picker dayjs
+pnpm add @abdulwaqar844/date-range-picker dayjs
 # or
-yarn add simple-daterange_picker dayjs
+yarn add @abdulwaqar844/date-range-picker dayjs
 ```
 
 ### Import Styles
 Import the stylesheet once in your app entrypoint (`App.tsx` or `main.tsx`):
 ```tsx
-import 'simple-daterange_picker/dist/style.css';
+import '@abdulwaqar844/date-range-picker/dist/style.css';
 ```
 
 ---
@@ -43,8 +43,8 @@ import 'simple-daterange_picker/dist/style.css';
 
 ### 1. Simple DatePicker
 ```tsx
-import { DatePicker, dayjs } from 'simple-daterange_picker';
-import 'simple-daterange_picker/dist/style.css';
+import { DatePicker, dayjs } from '@abdulwaqar844/date-range-picker';
+import '@abdulwaqar844/date-range-picker/dist/style.css';
 
 export function Example() {
   return (
@@ -63,7 +63,7 @@ export function Example() {
 
 ### 2. Simple TimePicker
 ```tsx
-import { TimePicker } from 'simple-daterange_picker';
+import { TimePicker } from '@abdulwaqar844/date-range-picker';
 
 export function Example() {
   return (
@@ -81,7 +81,7 @@ export function Example() {
 
 ### 3. Simple DateTimePicker
 ```tsx
-import { DateTimePicker } from 'simple-daterange_picker';
+import { DateTimePicker } from '@abdulwaqar844/date-range-picker';
 
 export function Example() {
   return (
@@ -96,7 +96,7 @@ export function Example() {
 
 ### 4. DateRangePicker (Dual-Month)
 ```tsx
-import { DateRangePicker, dayjs } from 'simple-daterange_picker';
+import { DateRangePicker, dayjs } from '@abdulwaqar844/date-range-picker';
 
 export function Example() {
   return (
@@ -115,7 +115,7 @@ export function Example() {
 
 ### 5. DateTimeRangePicker
 ```tsx
-import { DateTimeRangePicker } from 'simple-daterange_picker';
+import { DateTimeRangePicker } from '@abdulwaqar844/date-range-picker';
 
 export function Example() {
   return (
@@ -228,7 +228,7 @@ npm login
 npm publish
 ```
 
-Make sure the package name is available or belongs to your npm account. Package metadata points to [abdulwaqar844/simple-daterange_picker](https://github.com/abdulwaqar844/simple-daterange_picker). Do not store npm credentials in the repository.
+The npm package uses the personal scope `@abdulwaqar844` because npm rejected the unscoped name as too similar to an existing package. Publish while signed in to the npm account that owns this scope. Package metadata points to [abdulwaqar844/simple-daterange_picker](https://github.com/abdulwaqar844/simple-daterange_picker). Do not store npm credentials in the repository.
 
 For subsequent GitHub Actions publications, configure the package's npm Trusted Publisher with GitHub owner `abdulwaqar844`, repository `simple-daterange_picker`, workflow filename `publish.yml`, and permission to publish directly using `npm publish`. The workflow uses OIDC with `id-token: write`; it does not require a committed npm token. See the [npm trusted publishing documentation](https://docs.npmjs.com/trusted-publishers/).
 

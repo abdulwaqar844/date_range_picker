@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 
-This repository contains `simple-daterange_picker`, a React and TypeScript library providing `DatePicker`, `TimePicker`, `DateTimePicker`, `DateRangePicker`, and `DateTimeRangePicker`. It uses Day.js for date calculations and Floating UI for desktop popovers. React and React DOM are peer dependencies (React 18 or later).
+This repository contains `@abdulwaqar844/date-range-picker`, a React and TypeScript library providing `DatePicker`, `TimePicker`, `DateTimePicker`, `DateRangePicker`, and `DateTimeRangePicker`. It uses Day.js for date calculations and Floating UI for desktop popovers. React and React DOM are peer dependencies (React 18 or later).
 
 - `src/components/<PickerName>/` contains picker implementations and barrel exports.
 - `src/common/` contains shared triggers, calendar grids, headers, footers, presets, icons, and the mobile bottom sheet.

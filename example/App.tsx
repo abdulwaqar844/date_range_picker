@@ -80,7 +80,7 @@ export default function App() {
             Ant Design Inspired • Mobile Responsive • &lt; 15KB
           </div>
           <h1 style={{ margin: '0 0 8px 0', fontSize: 32, fontWeight: 700 }}>
-            simple-daterange_picker
+            @abdulwaqar844/date-range-picker
           </h1>
           <p style={{ margin: 0, color: isDark ? '#8c8c8c' : '#666', fontSize: 16 }}>
             Production-ready React Date, Time, and Range Picker suite with zero heavy UI dependencies.
