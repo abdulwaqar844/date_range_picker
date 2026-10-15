@@ -150,6 +150,7 @@ export const TimePicker: React.FC<TimePickerProps> = (props) => {
       {/* Mobile Bottom Sheet Drawer */}
       {isMobile && (
         <BottomSheet
+          ref={refs.setFloating}
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
           title="Select Time"

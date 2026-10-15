@@ -83,7 +83,12 @@ export const RangeTrigger = forwardRef<HTMLDivElement, RangeTriggerProps>((props
     >
       <div
         className={cn('adp-picker-input', activeTarget === 'start' && isOpen && 'adp-picker-input-active')}
-        onClick={!isStartDisabled ? onStartClick : undefined}
+        onClick={!isStartDisabled ? (e) => {
+          if (onStartClick) {
+            e.stopPropagation();
+            onStartClick(e);
+          }
+        } : undefined}
       >
         <input
           readOnly
@@ -91,6 +96,12 @@ export const RangeTrigger = forwardRef<HTMLDivElement, RangeTriggerProps>((props
           placeholder={placeholder[0]}
           value={startValue}
           tabIndex={0}
+          onKeyDown={(e) => {
+            if (['Enter', ' ', 'ArrowDown'].includes(e.key)) {
+              e.preventDefault();
+              if (!isOpen) e.currentTarget.click();
+            }
+          }}
         />
       </div>
 
@@ -98,7 +109,12 @@ export const RangeTrigger = forwardRef<HTMLDivElement, RangeTriggerProps>((props
 
       <div
         className={cn('adp-picker-input', activeTarget === 'end' && isOpen && 'adp-picker-input-active')}
-        onClick={!isEndDisabled ? onEndClick : undefined}
+        onClick={!isEndDisabled ? (e) => {
+          if (onEndClick) {
+            e.stopPropagation();
+            onEndClick(e);
+          }
+        } : undefined}
       >
         <input
           readOnly
@@ -106,18 +122,25 @@ export const RangeTrigger = forwardRef<HTMLDivElement, RangeTriggerProps>((props
           placeholder={placeholder[1]}
           value={endValue}
           tabIndex={0}
+          onKeyDown={(e) => {
+            if (['Enter', ' ', 'ArrowDown'].includes(e.key)) {
+              e.preventDefault();
+              if (!isOpen) e.currentTarget.click();
+            }
+          }}
         />
       </div>
 
       {showClear && (
-        <span
+        <button
+          type="button"
           className="adp-picker-clear adp-picker-clear-show"
           onClick={handleClearClick}
           title="Clear"
-          role="button"
+          aria-label="Clear"
         >
           {clearIcon}
-        </span>
+        </button>
       )}
 
       <span className="adp-picker-suffix">{suffixIcon}</span>

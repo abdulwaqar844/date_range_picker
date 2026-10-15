@@ -260,6 +260,7 @@ export const DateTimePicker: React.FC<DateTimePickerProps> = (props) => {
       {/* Mobile Bottom Sheet Drawer */}
       {isMobile && (
         <BottomSheet
+          ref={refs.setFloating}
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
           title="Select Date & Time"

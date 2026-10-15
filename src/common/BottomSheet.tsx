@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { forwardRef, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
 export interface BottomSheetProps {
@@ -8,12 +8,8 @@ export interface BottomSheetProps {
   children: React.ReactNode;
 }
 
-export const BottomSheet: React.FC<BottomSheetProps> = ({
-  isOpen,
-  onClose,
-  title = 'Select Date',
-  children,
-}) => {
+export const BottomSheet = forwardRef<HTMLDivElement, BottomSheetProps>((props, ref) => {
+  const { isOpen, onClose, title = 'Select Date', children } = props;
   useEffect(() => {
     if (!isOpen) return;
 
@@ -46,7 +42,7 @@ export const BottomSheet: React.FC<BottomSheetProps> = ({
         }
       }}
     >
-      <div className="adp-drawer-content" role="dialog" aria-modal="true">
+      <div ref={ref} className="adp-drawer-content" role="dialog" aria-modal="true">
         <div className="adp-drawer-handle" />
         <div className="adp-drawer-header">
           <span className="adp-drawer-title">{title}</span>
@@ -64,4 +60,6 @@ export const BottomSheet: React.FC<BottomSheetProps> = ({
     </div>,
     document.body
   );
-};
+});
+
+BottomSheet.displayName = 'BottomSheet';

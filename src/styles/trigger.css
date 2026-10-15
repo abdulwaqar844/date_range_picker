@@ -124,20 +124,40 @@
   pointer-events: none;
   cursor: pointer;
   border-radius: 50%;
+  border: 0;
   padding: 2px;
+  z-index: 1;
 }
 
 .adp-picker-clear:hover {
   color: var(--adp-text-color);
 }
 
-.adp-picker:hover .adp-picker-clear.adp-picker-clear-show {
+.adp-picker:hover .adp-picker-clear.adp-picker-clear-show,
+.adp-picker:focus-within .adp-picker-clear.adp-picker-clear-show,
+.adp-range-picker:hover .adp-picker-clear.adp-picker-clear-show,
+.adp-range-picker:focus-within .adp-picker-clear.adp-picker-clear-show {
   opacity: 1;
   pointer-events: auto;
 }
 
 .adp-picker:hover .adp-picker-clear.adp-picker-clear-show + .adp-picker-suffix {
   opacity: 0;
+}
+
+.adp-picker-suffix {
+  pointer-events: none;
+}
+
+.adp-range-picker .adp-picker-clear {
+  right: 11px;
+}
+
+@media (hover: none) {
+  .adp-picker-clear.adp-picker-clear-show {
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 
 /* Range Picker Specific */

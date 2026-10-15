@@ -76,16 +76,23 @@ export const PickerTrigger = forwardRef<HTMLDivElement, PickerTriggerProps>((pro
           placeholder={placeholder}
           value={value}
           tabIndex={0}
+          onKeyDown={(e) => {
+            if (['Enter', ' ', 'ArrowDown'].includes(e.key)) {
+              e.preventDefault();
+              if (!isOpen) e.currentTarget.click();
+            }
+          }}
         />
         {showClear && (
-          <span
+          <button
+            type="button"
             className="adp-picker-clear adp-picker-clear-show"
             onClick={handleClearClick}
             title="Clear"
-            role="button"
+            aria-label="Clear"
           >
             {clearIcon}
-          </span>
+          </button>
         )}
         <span className="adp-picker-suffix">{suffixIcon}</span>
       </div>
