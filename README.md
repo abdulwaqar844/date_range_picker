@@ -228,9 +228,9 @@ npm login
 npm publish
 ```
 
-The npm package uses the personal scope `@abdulwaqar844` because npm rejected the unscoped name as too similar to an existing package. Publish while signed in to the npm account that owns this scope. Package metadata points to [abdulwaqar844/simple-daterange_picker](https://github.com/abdulwaqar844/simple-daterange_picker). Do not store npm credentials in the repository.
+The npm package uses the personal scope `@abdulwaqar844` because npm rejected the unscoped name as too similar to an existing package. Publish while signed in to the npm account that owns this scope. Package metadata points to [abdulwaqar844/date_range_picker](https://github.com/abdulwaqar844/date_range_picker). Do not store npm credentials in the repository.
 
-For subsequent GitHub Actions publications, configure the package's npm Trusted Publisher with GitHub owner `abdulwaqar844`, repository `simple-daterange_picker`, workflow filename `publish.yml`, and permission to publish directly using `npm publish`. The workflow uses OIDC with `id-token: write`; it does not require a committed npm token. See the [npm trusted publishing documentation](https://docs.npmjs.com/trusted-publishers/).
+For subsequent GitHub Actions publications, configure the package's npm Trusted Publisher with GitHub owner `abdulwaqar844`, repository `date_range_picker`, workflow filename `publish.yml`, and permission to publish directly using `npm publish`. The workflow uses OIDC with `id-token: write`; it does not require a committed npm token. See the [npm trusted publishing documentation](https://docs.npmjs.com/trusted-publishers/).
 
 The workflow verifies pushes to `main`, pull requests, and manual runs. Publishing occurs only when a GitHub Release is published after verification succeeds. The release tag must match `v` plus the package version (currently `v1.0.1`). Increment the version in both package manifests before publishing later releases; npm does not allow reusing a published name/version combination.
 

@@ -71,10 +71,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abdulwaqar844/simple-daterange_picker.git"
+    "url": "git+https://github.com/abdulwaqar844/date_range_picker.git"
   },
-  "homepage": "https://github.com/abdulwaqar844/simple-daterange_picker#readme",
+  "homepage": "https://github.com/abdulwaqar844/date_range_picker#readme",
   "bugs": {
-    "url": "https://github.com/abdulwaqar844/simple-daterange_picker/issues"
+    "url": "https://github.com/abdulwaqar844/date_range_picker/issues"
   }
 }
