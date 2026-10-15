@@ -1,6 +1,6 @@
 {
   "name": "@abdulwaqar844/date-range-picker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ultra-lightweight, Ant Design-inspired, mobile-responsive Date & Time Picker suite for React.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
