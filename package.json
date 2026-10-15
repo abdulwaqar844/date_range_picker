@@ -1,5 +1,5 @@
 {
-  "name": "@abdulwaqar844/date-picker",
+  "name": "simple-daterange_picker",
   "version": "1.0.0",
   "description": "Ultra-lightweight, Ant Design-inspired, mobile-responsive Date & Time Picker suite for React.",
   "main": "./dist/index.js",

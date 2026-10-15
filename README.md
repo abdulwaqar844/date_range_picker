@@ -1,10 +1,10 @@
-# @abdulwaqar844/date-picker
+# simple-daterange_picker
 
 An ultra-lightweight, Ant Design-inspired, mobile-responsive Date & Time Picker suite for React.
 
 Houses **DatePicker**, **TimePicker**, **DateTimePicker**, **DateRangePicker**, and **DateTimeRangePicker** in a single production-ready package with **zero heavy UI framework dependencies** (no Emotion, no Styled-Components, no MUI core).
 
-[![npm version](https://img.shields.io/badge/npm-v1.0.0-blue.svg)](https://www.npmjs.com/package/@abdulwaqar844/date-picker)
+[![npm version](https://img.shields.io/badge/npm-v1.0.0-blue.svg)](https://www.npmjs.com/package/simple-daterange_picker)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Bundle Size](https://img.shields.io/badge/bundle%20size-%3C15KB%20gzip-brightgreen.svg)]()
 
@@ -24,17 +24,17 @@ Houses **DatePicker**, **TimePicker**, **DateTimePicker**, **DateRangePicker**, 
 ## 📦 Installation
 
 ```bash
-npm install @abdulwaqar844/date-picker dayjs
+npm install simple-daterange_picker dayjs
 # or
-pnpm add @abdulwaqar844/date-picker dayjs
+pnpm add simple-daterange_picker dayjs
 # or
-yarn add @abdulwaqar844/date-picker dayjs
+yarn add simple-daterange_picker dayjs
 ```
 
 ### Import Styles
 Import the stylesheet once in your app entrypoint (`App.tsx` or `main.tsx`):
 ```tsx
-import '@abdulwaqar844/date-picker/dist/style.css';
+import 'simple-daterange_picker/dist/style.css';
 ```
 
 ---
@@ -43,8 +43,8 @@ import '@abdulwaqar844/date-picker/dist/style.css';
 
 ### 1. Simple DatePicker
 ```tsx
-import { DatePicker, dayjs } from '@abdulwaqar844/date-picker';
-import '@abdulwaqar844/date-picker/dist/style.css';
+import { DatePicker, dayjs } from 'simple-daterange_picker';
+import 'simple-daterange_picker/dist/style.css';
 
 export function Example() {
   return (
@@ -63,7 +63,7 @@ export function Example() {
 
 ### 2. Simple TimePicker
 ```tsx
-import { TimePicker } from '@abdulwaqar844/date-picker';
+import { TimePicker } from 'simple-daterange_picker';
 
 export function Example() {
   return (
@@ -81,7 +81,7 @@ export function Example() {
 
 ### 3. Simple DateTimePicker
 ```tsx
-import { DateTimePicker } from '@abdulwaqar844/date-picker';
+import { DateTimePicker } from 'simple-daterange_picker';
 
 export function Example() {
   return (
@@ -96,7 +96,7 @@ export function Example() {
 
 ### 4. DateRangePicker (Dual-Month)
 ```tsx
-import { DateRangePicker, dayjs } from '@abdulwaqar844/date-picker';
+import { DateRangePicker, dayjs } from 'simple-daterange_picker';
 
 export function Example() {
   return (
@@ -115,7 +115,7 @@ export function Example() {
 
 ### 5. DateTimeRangePicker
 ```tsx
-import { DateTimeRangePicker } from '@abdulwaqar844/date-picker';
+import { DateTimeRangePicker } from 'simple-daterange_picker';
 
 export function Example() {
   return (
