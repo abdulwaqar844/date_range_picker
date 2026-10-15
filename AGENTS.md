@@ -24,7 +24,7 @@ Generated library output belongs in `dist/`, which is gitignored and should not 
 - `npm test` runs `vitest run` with a jsdom environment and test globals enabled.
 - `npm run build` runs tsup, cleans `dist/`, and generates CommonJS/ESM bundles, TypeScript declarations, source maps, and `style.css`. React and React DOM are externalized.
 
-Only `dev`, `build`, `lint`, and `test` npm scripts are currently defined. Do not assume `start`, `preview`, `lint:fix`, or `prettier` scripts exist.
+Additional release scripts: `npm run check` aliases the TypeScript check; `npm run pack:check` previews the npm tarball through `npm pack --dry-run`. The `prepack` lifecycle builds the library before packing/publishing, and `prepublishOnly` checks types and runs tests before publishing. Do not assume `start`, `preview`, `lint:fix`, or `prettier` scripts exist.
 
 ## Coding Style & Naming Conventions
 
@@ -34,7 +34,7 @@ Keep picker-specific code in its component directory and shared UI in `src/commo
 
 ## Testing Guidelines
 
-For changes, run `npm run lint`, `npm test`, and `npm run build`. Report command failures or unavailable checks accurately. Vitest and React Testing Library are already configured; no coverage threshold is configured. Add regression tests under `tests/` using `*.test.ts` or `*.test.tsx`.
+For changes, run `npm run check` (or `npm run lint`), `npm test`, and `npm run build`. For publishing changes, also run `npm run pack:check`. Report command failures or unavailable checks accurately. Vitest and React Testing Library are already configured; no coverage threshold is configured. Add regression tests under `tests/` using `*.test.ts` or `*.test.tsx`.
 
 The suite covers date parsing/formatting, month matrices, decade years, range inclusion, initial rendering, and interaction regressions for mobile selection, clearing, and keyboard opening. These checks do not establish full interaction coverage. For behavior changes, test the affected selections, clearing, disabled values, callbacks, controlled/uncontrolled state, or range ordering as appropriate. Use fixed dates for deterministic calculations.
 

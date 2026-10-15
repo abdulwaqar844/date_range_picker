@@ -207,5 +207,34 @@ npm run build
 
 ---
 
+## Publishing to npm
+
+Use Node 24 and npm 11.5.1 or later for the release workflow.
+
+Before publishing, run:
+
+```bash
+npm run check
+npm test
+npm run pack:check
+```
+
+`check` runs the TypeScript check. `pack:check` builds the library through `prepack` and previews the files that npm would publish without uploading anything. The package includes `dist/`, `README.md`, `LICENSE`, and package metadata. `npm publish` also runs the checks/tests and rebuilds the library through its lifecycle scripts.
+
+For an initial local publication, after verification passes:
+
+```bash
+npm login
+npm publish
+```
+
+Make sure the package name is available or belongs to your npm account. Package metadata points to [abdulwaqar844/simple-daterange_picker](https://github.com/abdulwaqar844/simple-daterange_picker). Do not store npm credentials in the repository.
+
+For subsequent GitHub Actions publications, configure the package's npm Trusted Publisher with GitHub owner `abdulwaqar844`, repository `simple-daterange_picker`, workflow filename `publish.yml`, and permission to publish directly using `npm publish`. The workflow uses OIDC with `id-token: write`; it does not require a committed npm token. See the [npm trusted publishing documentation](https://docs.npmjs.com/trusted-publishers/).
+
+The workflow verifies pushes to `main`, pull requests, and manual runs. Publishing occurs only when a GitHub Release is published after verification succeeds. The release tag must match `v` plus the package version (currently `v1.0.0`). Increment the version in both package manifests before publishing later releases; npm does not allow reusing a published name/version combination.
+
+---
+
 ## 📄 License
 MIT © [Abdul Waqar](https://github.com/abdulwaqar844)
