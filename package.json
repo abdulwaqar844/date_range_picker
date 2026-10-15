@@ -1,0 +1,64 @@
+{
+  "name": "@abdulwaqar844/date-picker",
+  "version": "1.0.0",
+  "description": "Ultra-lightweight, Ant Design-inspired, mobile-responsive Date & Time Picker suite for React.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./style.css": "./dist/style.css",
+    "./dist/style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsup",
+    "lint": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "react",
+    "date-picker",
+    "time-picker",
+    "datetime-picker",
+    "date-range-picker",
+    "datetime-range-picker",
+    "antd",
+    "ant-design",
+    "mobile-responsive",
+    "lightweight"
+  ],
+  "author": "Abdul Waqar <abdulwaqar844@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "dependencies": {
+    "@floating-ui/react": "^0.27.4",
+    "dayjs": "^1.11.13"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^22.10.1",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "jsdom": "^29.1.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7",
+    "vitest": "^2.1.8"
+  }
+}

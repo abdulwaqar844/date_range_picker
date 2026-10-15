@@ -1,0 +1,302 @@
+/* Dropdown Panel Container */
+.adp-dropdown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  box-sizing: border-box;
+  font-family: var(--adp-font-family);
+  font-size: var(--adp-font-size);
+  color: var(--adp-text-color);
+  line-height: var(--adp-line-height);
+  background-color: var(--adp-panel-bg);
+  border-radius: var(--adp-border-radius);
+  box-shadow: var(--adp-box-shadow);
+  border: 1px solid var(--adp-border-color);
+  user-select: none;
+}
+
+.adp-panel-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Presets Sidebar */
+.adp-presets-sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 12px;
+  border-right: 1px solid var(--adp-border-color);
+  min-width: 110px;
+  gap: 4px;
+}
+
+.adp-preset-tag {
+  display: inline-block;
+  text-align: left;
+  padding: 4px 8px;
+  font-size: var(--adp-font-size-sm);
+  color: var(--adp-text-color);
+  background: transparent;
+  border: none;
+  border-radius: var(--adp-border-radius-sm);
+  cursor: pointer;
+  transition: var(--adp-transition-base);
+}
+
+.adp-preset-tag:hover {
+  background: var(--adp-hover-bg);
+  color: var(--adp-primary-color);
+}
+
+/* Header */
+.adp-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  height: 40px;
+  border-bottom: 1px solid var(--adp-border-color);
+}
+
+.adp-header-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 4px;
+  color: var(--adp-text-secondary);
+  background: transparent;
+  border: none;
+  border-radius: var(--adp-border-radius-sm);
+  cursor: pointer;
+  transition: var(--adp-transition-base);
+}
+
+.adp-header-btn:hover {
+  color: var(--adp-text-color);
+  background: var(--adp-hover-bg);
+}
+
+.adp-header-view-selectors {
+  display: flex;
+  gap: 4px;
+  font-weight: 600;
+}
+
+.adp-header-view-btn {
+  color: var(--adp-text-color);
+  background: transparent;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: var(--adp-border-radius-sm);
+  transition: var(--adp-transition-base);
+}
+
+.adp-header-view-btn:hover {
+  color: var(--adp-primary-color);
+  background: var(--adp-hover-bg);
+}
+
+/* Panel Body & Date Grid */
+.adp-panel-body {
+  padding: 8px 12px;
+}
+
+.adp-weekdays-row {
+  display: grid;
+  grid-template-columns: repeat(7, 36px);
+  text-align: center;
+  font-size: var(--adp-font-size-sm);
+  color: var(--adp-text-secondary);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.adp-days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 36px);
+  grid-auto-rows: 32px;
+  row-gap: 2px;
+}
+
+/* Cell Styles */
+.adp-cell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 0;
+  cursor: pointer;
+}
+
+.adp-cell-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--adp-cell-radius);
+  transition: background 0.15s, border 0.15s;
+  font-size: var(--adp-font-size);
+}
+
+.adp-cell:hover:not(.adp-cell-disabled) .adp-cell-inner {
+  background-color: var(--adp-hover-bg);
+}
+
+.adp-cell-other-month {
+  color: var(--adp-text-disabled);
+}
+
+.adp-cell-today .adp-cell-inner {
+  border: 1px solid var(--adp-primary-color);
+  font-weight: 600;
+}
+
+.adp-cell-selected .adp-cell-inner {
+  background-color: var(--adp-primary-color) !important;
+  color: var(--adp-text-inverse) !important;
+  font-weight: 600;
+}
+
+/* Range Styles */
+.adp-cell-in-range {
+  background-color: var(--adp-range-bg);
+}
+
+.adp-cell-range-start {
+  background-color: var(--adp-range-bg);
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.adp-cell-range-end {
+  background-color: var(--adp-range-bg);
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.adp-cell-range-start.adp-cell-range-end {
+  background-color: transparent;
+}
+
+.adp-cell-range-hover {
+  background-color: var(--adp-range-hover-bg);
+}
+
+/* Disabled Cell */
+.adp-cell-disabled {
+  cursor: not-allowed;
+  color: var(--adp-text-disabled);
+}
+
+.adp-cell-disabled .adp-cell-inner {
+  background: var(--adp-disabled-bg);
+}
+
+/* Month & Year Selectors Grid (3 cols x 4 rows) */
+.adp-months-grid,
+.adp-years-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 75px);
+  grid-auto-rows: 56px;
+  gap: 8px;
+  padding: 12px 6px;
+  align-items: center;
+  justify-content: center;
+}
+
+.adp-month-cell,
+.adp-year-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  border-radius: var(--adp-border-radius);
+  cursor: pointer;
+  transition: var(--adp-transition-base);
+}
+
+.adp-month-cell:hover,
+.adp-year-cell:hover {
+  background-color: var(--adp-hover-bg);
+}
+
+.adp-month-cell-selected,
+.adp-year-cell-selected {
+  background-color: var(--adp-primary-color) !important;
+  color: var(--adp-text-inverse) !important;
+  font-weight: 600;
+}
+
+/* Dual Range Panels */
+.adp-range-panels {
+  display: flex;
+  flex-direction: row;
+}
+
+.adp-range-panel-divider {
+  width: 1px;
+  background-color: var(--adp-border-color);
+}
+
+/* Footer */
+.adp-panel-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+  border-top: 1px solid var(--adp-border-color);
+  font-size: var(--adp-font-size-sm);
+}
+
+.adp-footer-extra {
+  flex: 1;
+}
+
+.adp-footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.adp-btn-link {
+  color: var(--adp-primary-color);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: var(--adp-font-size-sm);
+  padding: 2px 6px;
+  border-radius: var(--adp-border-radius-sm);
+}
+
+.adp-btn-link:hover {
+  color: var(--adp-primary-hover);
+}
+
+.adp-btn-primary {
+  color: var(--adp-text-inverse);
+  background-color: var(--adp-primary-color);
+  border: 1px solid var(--adp-primary-color);
+  padding: 2px 10px;
+  border-radius: var(--adp-border-radius-sm);
+  cursor: pointer;
+  font-size: var(--adp-font-size-sm);
+  transition: var(--adp-transition-base);
+}
+
+.adp-btn-primary:hover {
+  background-color: var(--adp-primary-hover);
+  border-color: var(--adp-primary-hover);
+}
+
+.adp-btn-primary:disabled {
+  background-color: var(--adp-disabled-bg);
+  border-color: var(--adp-border-color);
+  color: var(--adp-text-disabled);
+  cursor: not-allowed;
+}

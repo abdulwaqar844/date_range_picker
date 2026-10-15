@@ -1,0 +1,185 @@
+/* Single Trigger Input */
+.adp-picker {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 4px 11px;
+  color: var(--adp-text-color);
+  font-size: var(--adp-font-size);
+  font-family: var(--adp-font-family);
+  line-height: var(--adp-line-height);
+  background-color: var(--adp-bg-color);
+  border: 1px solid var(--adp-border-color);
+  border-radius: var(--adp-border-radius);
+  transition: var(--adp-transition-base);
+  cursor: pointer;
+  user-select: none;
+}
+
+.adp-picker:hover {
+  border-color: var(--adp-border-hover);
+}
+
+.adp-picker-focused,
+.adp-picker:focus-within {
+  border-color: var(--adp-border-focus);
+  box-shadow: var(--adp-focus-ring);
+  outline: 0;
+}
+
+/* Sizes */
+.adp-picker-small {
+  padding: 0px 7px;
+  font-size: var(--adp-font-size-sm);
+  border-radius: var(--adp-border-radius-sm);
+}
+
+.adp-picker-large {
+  padding: 7px 11px;
+  font-size: var(--adp-font-size-lg);
+  border-radius: var(--adp-border-radius-lg);
+}
+
+/* Status */
+.adp-picker-status-error {
+  border-color: var(--adp-error-color) !important;
+}
+.adp-picker-status-error.adp-picker-focused,
+.adp-picker-status-error:focus-within {
+  box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2) !important;
+}
+
+.adp-picker-status-warning {
+  border-color: var(--adp-warning-color) !important;
+}
+.adp-picker-status-warning.adp-picker-focused,
+.adp-picker-status-warning:focus-within {
+  box-shadow: 0 0 0 2px rgba(250, 173, 20, 0.2) !important;
+}
+
+/* Disabled */
+.adp-picker-disabled {
+  background-color: var(--adp-disabled-bg);
+  border-color: var(--adp-border-color);
+  color: var(--adp-text-disabled);
+  cursor: not-allowed;
+}
+
+.adp-picker-disabled:hover {
+  border-color: var(--adp-border-color);
+}
+
+.adp-picker-disabled input {
+  cursor: not-allowed;
+  color: var(--adp-text-disabled);
+}
+
+/* Inner Input Element */
+.adp-picker-input {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+}
+
+.adp-picker-input > input {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: inherit;
+}
+
+.adp-picker-input > input::placeholder {
+  color: var(--adp-text-secondary);
+}
+
+/* Icons */
+.adp-picker-suffix,
+.adp-picker-clear {
+  display: inline-flex;
+  align-items: center;
+  margin-inline-start: 4px;
+  color: var(--adp-text-secondary);
+  font-size: 12px;
+  line-height: 1;
+  transition: var(--adp-transition-base);
+}
+
+.adp-picker-clear {
+  position: absolute;
+  right: 0;
+  background: var(--adp-bg-color);
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.adp-picker-clear:hover {
+  color: var(--adp-text-color);
+}
+
+.adp-picker:hover .adp-picker-clear.adp-picker-clear-show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.adp-picker:hover .adp-picker-clear.adp-picker-clear-show + .adp-picker-suffix {
+  opacity: 0;
+}
+
+/* Range Picker Specific */
+.adp-range-picker {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 4px 11px;
+  color: var(--adp-text-color);
+  font-size: var(--adp-font-size);
+  font-family: var(--adp-font-family);
+  line-height: var(--adp-line-height);
+  background-color: var(--adp-bg-color);
+  border: 1px solid var(--adp-border-color);
+  border-radius: var(--adp-border-radius);
+  transition: var(--adp-transition-base);
+  cursor: pointer;
+}
+
+.adp-range-picker:hover {
+  border-color: var(--adp-border-hover);
+}
+
+.adp-range-picker.adp-picker-focused {
+  border-color: var(--adp-border-focus);
+  box-shadow: var(--adp-focus-ring);
+}
+
+.adp-range-separator {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 8px;
+  color: var(--adp-text-secondary);
+}
+
+.adp-range-active-bar {
+  position: absolute;
+  bottom: -1px;
+  height: 2px;
+  background-color: var(--adp-primary-color);
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  pointer-events: none;
+}

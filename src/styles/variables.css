@@ -1,0 +1,75 @@
+:root {
+  /* Brand & Status Colors */
+  --adp-primary-color: #1677ff;
+  --adp-primary-hover: #4096ff;
+  --adp-primary-active: #0958d9;
+  --adp-primary-light: #e6f4ff;
+  --adp-range-bg: #e6f4ff;
+  --adp-range-hover-bg: #f0f7ff;
+  
+  --adp-error-color: #ff4d4f;
+  --adp-warning-color: #faad14;
+  
+  /* Text & Surfaces */
+  --adp-text-color: rgba(0, 0, 0, 0.88);
+  --adp-text-secondary: rgba(0, 0, 0, 0.45);
+  --adp-text-disabled: rgba(0, 0, 0, 0.25);
+  --adp-text-inverse: #ffffff;
+  
+  --adp-bg-color: #ffffff;
+  --adp-panel-bg: #ffffff;
+  --adp-hover-bg: rgba(0, 0, 0, 0.04);
+  --adp-active-bg: rgba(0, 0, 0, 0.08);
+  --adp-disabled-bg: rgba(0, 0, 0, 0.04);
+  
+  /* Borders & Shadows */
+  --adp-border-color: #d9d9d9;
+  --adp-border-hover: #4096ff;
+  --adp-border-focus: #1677ff;
+  --adp-box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12);
+  --adp-focus-ring: 0 0 0 2px rgba(22, 119, 255, 0.2);
+  
+  /* Dimensions & Typography */
+  --adp-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --adp-font-size: 14px;
+  --adp-font-size-sm: 12px;
+  --adp-font-size-lg: 16px;
+  --adp-line-height: 1.5714285714285714;
+  --adp-border-radius: 6px;
+  --adp-border-radius-sm: 4px;
+  --adp-border-radius-lg: 8px;
+  
+  /* Input Heights */
+  --adp-height-sm: 24px;
+  --adp-height-md: 32px;
+  --adp-height-lg: 40px;
+  
+  /* Calendar Matrix Cells */
+  --adp-cell-size: 28px;
+  --adp-cell-margin: 3px;
+  --adp-cell-radius: 4px;
+  
+  /* Mobile Bottom Sheet */
+  --adp-drawer-radius: 16px;
+  --adp-drawer-backdrop: rgba(0, 0, 0, 0.45);
+  --adp-touch-cell-size: 42px;
+  
+  /* Transitions */
+  --adp-transition-base: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Dark mode theme variables */
+[data-theme='dark'], .dark {
+  --adp-text-color: rgba(255, 255, 255, 0.85);
+  --adp-text-secondary: rgba(255, 255, 255, 0.45);
+  --adp-text-disabled: rgba(255, 255, 255, 0.3);
+  --adp-border-color: #424242;
+  --adp-bg-color: #141414;
+  --adp-panel-bg: #1f1f1f;
+  --adp-range-bg: #111d2c;
+  --adp-range-hover-bg: #162338;
+  --adp-hover-bg: rgba(255, 255, 255, 0.08);
+  --adp-active-bg: rgba(255, 255, 255, 0.12);
+  --adp-disabled-bg: rgba(255, 255, 255, 0.04);
+  --adp-box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.45);
+}

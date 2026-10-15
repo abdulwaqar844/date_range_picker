@@ -1,0 +1,82 @@
+/* Time Panel */
+.adp-time-panel {
+  display: flex;
+  flex-direction: row;
+  height: 224px;
+}
+
+.adp-time-column {
+  flex: 1;
+  width: 56px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-left: 1px solid var(--adp-border-color);
+  scroll-behavior: smooth;
+}
+
+.adp-time-column:first-child {
+  border-left: none;
+}
+
+/* Custom Scrollbar for columns */
+.adp-time-column::-webkit-scrollbar {
+  width: 4px;
+}
+
+.adp-time-column::-webkit-scrollbar-thumb {
+  background: var(--adp-border-color);
+  border-radius: 4px;
+}
+
+.adp-time-column::-webkit-scrollbar-thumb:hover {
+  background: var(--adp-text-secondary);
+}
+
+/* Time Cell / Item */
+.adp-time-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  line-height: 28px;
+  font-size: var(--adp-font-size-sm);
+  color: var(--adp-text-color);
+  cursor: pointer;
+  transition: var(--adp-transition-base);
+  margin: 0;
+  padding: 0;
+}
+
+.adp-time-cell:hover {
+  background: var(--adp-hover-bg);
+}
+
+.adp-time-cell-selected {
+  background: var(--adp-primary-light) !important;
+  color: var(--adp-primary-color) !important;
+  font-weight: 600;
+}
+
+.adp-time-cell-disabled {
+  color: var(--adp-text-disabled);
+  cursor: not-allowed;
+  background: transparent;
+}
+
+.adp-time-cell-disabled:hover {
+  background: transparent;
+}
+
+/* Combined DateTime Layout */
+.adp-datetime-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.adp-datetime-divider {
+  width: 1px;
+  background-color: var(--adp-border-color);
+}

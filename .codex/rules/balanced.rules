@@ -1,0 +1,10 @@
+# dev-agent-setup balanced preset. Project rules only load after trust approval.
+# Command prefix rules are token-based, not a full shell security policy.
+prefix_rule(pattern=["git", "status"], decision="allow")
+prefix_rule(pattern=["git", "diff"], decision="allow")
+prefix_rule(pattern=["git", "log"], decision="allow")
+prefix_rule(pattern=["git", "push"], decision="prompt", justification="Review remote changes before pushing")
+prefix_rule(pattern=["npm", "install"], decision="prompt", justification="Installing dependencies may execute lifecycle scripts")
+prefix_rule(pattern=["npm", "publish"], decision="prompt", justification="Publishing releases a public package")
+prefix_rule(pattern=["git", "reset", "--hard"], decision="forbidden", justification="Destructive reset is blocked")
+prefix_rule(pattern=["git", "clean", "-fd"], decision="forbidden", justification="Destructive clean is blocked")

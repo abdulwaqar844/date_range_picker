@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "defaultMode": "default",
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(npm run lint)",
+      "Bash(npm test)",
+      "Bash(npm run test *)"
+    ],
+    "ask": [
+      "Bash(git push *)",
+      "Bash(npm install *)",
+      "Bash(npm ci *)",
+      "Bash(npm publish *)",
+      "Bash(git reset *)",
+      "Bash(git clean *)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./**/.env)",
+      "Read(./**/.env.*)",
+      "Read(./**/id_rsa)",
+      "Read(./**/id_ed25519)",
+      "Bash(git push --force *)",
+      "Bash(rm -rf /*)"
+    ]
+  }
+}
