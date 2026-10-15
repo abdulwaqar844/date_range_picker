@@ -4,7 +4,7 @@ An ultra-lightweight, Ant Design-inspired, mobile-responsive Date & Time Picker 
 
 Houses **DatePicker**, **TimePicker**, **DateTimePicker**, **DateRangePicker**, and **DateTimeRangePicker** in a single production-ready package with **zero heavy UI framework dependencies** (no Emotion, no Styled-Components, no MUI core).
 
-[![npm version](https://img.shields.io/badge/npm-v1.0.1-blue.svg)](https://www.npmjs.com/package/@abdulwaqar844/date-range-picker)
+[![npm version](https://img.shields.io/badge/npm-v1.0.2-blue.svg)](https://www.npmjs.com/package/@abdulwaqar844/date-range-picker)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Bundle Size](https://img.shields.io/badge/bundle%20size-%3C15KB%20gzip-brightgreen.svg)]()
 
@@ -232,7 +232,7 @@ The npm package uses the personal scope `@abdulwaqar844` because npm rejected th
 
 For subsequent GitHub Actions publications, configure the package's npm Trusted Publisher with GitHub owner `abdulwaqar844`, repository `date_range_picker`, workflow filename `publish.yml`, and permission to publish directly using `npm publish`. The workflow uses OIDC with `id-token: write`; it does not require a committed npm token. See the [npm trusted publishing documentation](https://docs.npmjs.com/trusted-publishers/).
 
-The workflow verifies pushes to `main`, pull requests, and manual runs. Publishing occurs only when a GitHub Release is published after verification succeeds. The release tag must match `v` plus the package version (currently `v1.0.1`). Increment the version in both package manifests before publishing later releases; npm does not allow reusing a published name/version combination.
+The workflow verifies pushes to `main`, pull requests, and manual runs. Publishing occurs only when a GitHub Release is published after verification succeeds. The release tag must match `v` plus the package version (currently `v1.0.2`). Increment the version in both package manifests before publishing later releases; npm does not allow reusing a published name/version combination.
 
 ---
 
